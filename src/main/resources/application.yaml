@@ -74,8 +74,8 @@ shiro:
 mail:
   smtp:
     host: smtp.qq.com
-    username: 847064370@qq.com
-    password: vtvhcjsacnuubdaj
+    username: XXXXXXXX
+    password: XXXXXXXX
   from:
     name: 法律知识分享平台
 
