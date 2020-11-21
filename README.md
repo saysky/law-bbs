@@ -1,7 +1,8 @@
 SpringBoot法律知识分享平台，适合做任何类型的问答社区或者论坛。 <br/>
 
 可以通过修改网站名称和文章内容，修改成任何类型的论坛。<br/>
-详细介绍：[点此](https://liuyanzhao.com/shop/1329450187202105345.html)
+详细介绍：[点此](https://liuyanzhao.com/shop/1329450187202105345.html) <br/>
+预览地址：[https://lawbbs.liuyanzhao.com](https://lawbbs.liuyanzhao.com)
 
 
 ## 功能介绍
