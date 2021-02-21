@@ -1,7 +1,8 @@
 SpringBoot法律知识分享平台，适合做任何类型的问答社区或者论坛。 <br/>
 
 可以通过修改网站名称和文章内容，修改成任何类型的论坛。<br/>
-详细介绍：[点此](https://liuyanzhao.com/shop/1329450187202105345.html)
+详细介绍：[点此](https://liuyanzhao.com/shop/1329450187202105345.html) <br/>
+预览地址：[https://lawbbs.liuyanzhao.com](https://lawbbs.liuyanzhao.com)
 
 
 ## 功能介绍
@@ -54,32 +55,3 @@ SpringBoot法律知识分享平台，适合做任何类型的问答社区或者�
 ## 联系方式
 目前代码还没有完全开源，需要完整的朋友可以联系微信 847064370 <br/>
 提供完整源码、远程本地部署和代码讲解等服务。
-
-## 代码讲解
-#### 关注功能实现
-关注功能的实现主要是依赖 follow 表
-1. 关注动作
-比如 张三(用户id为2) 关注 李四(用户id为3)
-会往 follow 表插入一条数据，user_id=2,accept_user_id=3
-
-2. 查询关注我的人(我的粉丝列表)
-比如我是张三(用户为2)
-查询关注我的人步骤如下：
-先查询 follow 表 accept_user_id = 2 的，获取 user_id  (即查询关注我的人的用户ID)
-然后根据上面查询的id列表再去 user 表查询用户信息
-
-比如 select * from user where id in (select user_id from follow where accept_user_id = 2)
-
-3. 查询我关注的人
-比如我是张三(用户为2)
-查询我关注的人步骤如下：
-先查询 follow 表 user_id = 2 的，获取 user_id  (即查我关注的的人的用户ID)
-然后根据上面查询的id列表再去 user 表查询用户信息
-
-比如 select * from user where id in (select accept_user_id from follow where user_id = 2)
-
-#### 动态功能实现
-比如我是张三(用户id为2)，根据上面的关注功能说明，查询到我关注的用户的id列表，比如为[3,4,5]
-然后去查询帖子表 post ，该表有user_id字段，根据用户id集合查询文章列表
-比如 select * from post where user_id in (3,4,5)
-
