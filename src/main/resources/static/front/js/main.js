@@ -465,7 +465,7 @@ $('.question-mark').click(function () {
 });
 
 /**
- * 取关
+ * 取消收藏
  */
 $('.question-unmark-btn').click(function () {
     let parent = $(this).parent('.question-mark-box');

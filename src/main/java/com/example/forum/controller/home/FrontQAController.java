@@ -158,7 +158,7 @@ public class FrontQAController extends BaseController {
     }
 
     /**
-     * 问题动态
+     * 问题收藏列表
      *
      * @param pageNumber
      * @param pageSize

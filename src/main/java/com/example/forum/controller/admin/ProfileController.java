@@ -83,7 +83,7 @@ public class ProfileController extends BaseController {
         if (id == null) {
             User user = userService.get(loginUser.getId());
             if (user != null && Objects.equals(user.getUserPass(), Md5Util.toMd5(beforePass, CommonConstant.PASSWORD_SALT, 10))) {
-
+                userService.updatePassword(user.getId(), newPass);
             } else {
                 return JsonResult.error("旧密码错误");
             }

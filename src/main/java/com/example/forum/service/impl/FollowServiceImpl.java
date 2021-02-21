@@ -78,7 +78,7 @@ public class FollowServiceImpl implements FollowService {
         queryWrapper.eq("accept_user_id", acceptUserId);
         List<Follow> follows = followMapper.selectList(queryWrapper);
         if (follows != null && follows.size() > 0) {
-            follows.get(0);
+            return follows.get(0);
         }
         return null;
     }
